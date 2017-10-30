@@ -1,0 +1,81 @@
+$out-of-range-color: lighten(#333, 40%);
+$out-of-range-bg-color: lighten(#333, 70%);
+
+$calendar-border: #DDD;
+$cell-border: #DDD;
+
+$border-color: #CCC;
+
+$segment-width: percentage(1 / 7);
+
+$time-selection-color: white;
+$time-selection-bg-color: rgba(0,0,0, .50);
+$date-selection-bg-color: rgba(0,0,0, .10);
+
+
+$event-bg: #3174ad;
+$event-border: darken(#3174ad, 10%);
+$event-color: #fff;
+$event-border-radius: 5px;
+$event-padding: 2px 5px;
+$event-zindex: 4;
+
+$btn-color: #373a3c;
+$btn-bg: #fff;
+$btn-border: #ccc;
+
+$current-time-color: #74ad31;
+
+$rbc-css-prefix: rbc-i;
+
+$today-highlight-bg: #eaf6ff;
+
+.rbc-event {
+  cursor: pointer;
+  padding: $event-padding;
+  background-color: $event-bg;
+  border-radius: $event-border-radius;
+  color: $event-color;
+
+  &.rbc-selected {
+    background-color: darken($event-bg, 10%);
+  }
+}
+
+// .rbc-event-label {
+//   &:extend(.rbc-ellipsis);
+//   font-size: 80%;
+// }
+
+.rbc-event-overlaps {
+  box-shadow: -1px 1px 5px 0px rgba(51,51,51,.5);
+}
+
+.rbc-event-continues-prior {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.rbc-event-continues-after {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+.rbc-event-continues-earlier {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.rbc-event-continues-later {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rbc-event-continues-day-after {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rbc-event-continues-day-prior {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
